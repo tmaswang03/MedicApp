@@ -4,7 +4,7 @@
 
 * { margin:0; font-family:"Lato", sans-serif; }
 
-body { margin:0; overflow-x:hidden; background-color: #f7fbfd; align-items: center; justify-content: center; }
+body { margin:0; overflow-x:hidden; background-color: #00011c; align-items: center; justify-content: center; }
 
 nav ul { overflow:hidden; list-style-type:none; margin:0; padding:0 40px; align-items: center; justify-content: center; }
 nav ol { margin:0; padding:0; list-style:none;}
