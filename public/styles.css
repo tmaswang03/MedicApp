@@ -6702,6 +6702,13 @@ video {
   width: 24rem;
 }
 
+.w-max {
+  width: 32rem;
+}
+.h-max {
+  height: 32rem;
+}
+
 .w-auto {
   width: auto;
 }
