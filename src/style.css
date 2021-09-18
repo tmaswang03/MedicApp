@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { margin:0; font-family:"Lato", sans-serif; }
+
+body { margin:0; overflow-x:hidden; background-color: #f7fbfd; align-items: center; justify-content: center; }
+
+nav ul { overflow:hidden; list-style-type:none; margin:0; padding:0 40px; }
+nav ol { margin:0; padding:0; list-style:none;}
+#navbar nav{ line-height:normal; }
+#navbar { background-color:rgba(0, 0, 0, 0.5); text-transform:uppercase; font-family:"Open Sans", sans-serif; margin:0; width:100%; overflow:hidden; position:fixed; top:0; }
+#navbar li { float:right; margin:0 15px 0 0; }
+#navbar li a { display:block; color:white; text-align:center; padding:30px 30px; text-decoration:none; font-size:14px; height:auto; }
+#navbar li a:hover:not(.active) { background-color:#111; }
+#navbar img { height:auto; width:auto; max-width:72px; max-height:72px; padding-top:7.5px; }
+#navbar form{display:none; width:100%; margin:0; padding:0;}
+#navbar ul .dropdown { display:none; }
+
+
+/* #navbar .drop li a {display: none}
+#navbar .dropdown { display:none;} */
+/* #navbar a { display: nsone;} */
+
+
+/* #mainav .drop{list-style-type:none; margin:40 auto; width:640px; padding:0; overflow:hidden;}
+.drop ul { display:none; margin:0; padding:0; list-style:none; position:relative; width:100%;}
+.drop:hover ul { display:block; }
+.drop a:hover { background-color:#680000;  color:#a2becf } */
+
+/* #mainav .dropdown {font-size: 16px; border:none; outline:none; color:white; padding:14px 16px; background-color:inherit; font-family:inherit; margin:0; }
+#navbar .drop:hover{position:absolute; font-family:"Font Awesome 5 Free"; font-weight:900; font-size:10px; line-height:10px; content:"\f0d7"; top:35px; left:5px;} */
+
+
+#pageintro{padding:200px 0 270px;}
+#pageintro article{display:block; max-width:75%; margin:0 auto; text-transform:capitalize; text-align:center;}
+#pageintro article p:first-of-type{margin:0 0 30px 0; padding:0; font-size:2.5rem;}
+#pageintro .heading{font-size:5rem;}
+#pageintro footer{margin-top:50px;}
+#pageintro footer .btn{padding:25px 35px 27px; font-size:1.2rem; border-radius:50px;}
+
+#title { background-color:rgba(0,0,0, 0); color:white; font-weight:bold; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:2; width:80%; padding:20px; text-align:center; margin:30px 0 30px 0 }
+#title li { height:120px; list-style-type:none; display:inline; }
+#title .h1 { margin:0 0 80px 0; font-family:'Lato';-webkit-filter: drop-shadow(4px 4px 4px #333); filter: drop-shadow(4px 4px 4px #333);  }
+#title .btn { transition: 0.3s; padding:25px 35px 27px; font-size:1.2rem; border-radius:50px; border-style: solid; border-width:3px; font-family: 'Lato'; margin: 0 20px; }
+
+.btn, .btn.inverse:hover{color:#FFFFFF; background-color:rgba(255,255,255, 0.3); border-color:rgba(255,255,255, 0.3);}
+.btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
+
+#about { height:400px; }
+#about .avatar { width:400px; border-radius:50%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)}
+#about ul {  }
+#about li { list-style-type:none; display:inline; }
+#about .article { width:800px; padding:25px 35px 27px; border-radius:30px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)}
+#about .speech-bubble { position: relative; border-radius: .4em; background-color: white; }
+#about .speech-bubble:after { content: ''; position: absolute; left: 0; top: 50%; width: 0; height: 0; border: 20px solid transparent; border-right-color: #CCC; border-left: 0; margin-top: -10px; margin-left: -20px; }
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap');
+.bg-app { background-image: url('https://images.unsplash.com/photo-1589070127509-ea788341cc5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=889&q=80'); }
+
+#skills { align-self: center; width:100%;  display: grid; grid-template-rows: repeat(1, 1fr); grid-template-columns: repeat(2, 1fr); margin: 0; justify-content: center; align-content: center; align-items: center; }
+#skills .cards { margin: 100px 0 0 0 ; }
+
+
+.collage { box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) } 
+
+@media (max-width: 80vw) {
+    #about .speech-bubble:after { content: ''; position: absolute; top: 0; top: 50%; width: 0; height: 0; border: 20px solid transparent; border-right-color: #CCC; border-left: 0; margin-top: -10px; margin-left: -20px; }
+}
