@@ -1,4 +1,4 @@
-/*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com */
+/*! tailwindcss v2.2.15 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
 
@@ -473,6 +473,18 @@ textarea::placeholder {
 button,
 [role="button"] {
   cursor: pointer;
+}
+
+/**
+ * Override legacy focus reset from Normalize with modern Firefox focus styles.
+ *
+ * This is actually an improvement over the new defaults in Firefox in our testing,
+ * as it triggers the better focus styles even for links, which still use a dotted
+ * outline in Firefox by default.
+ */
+
+:-moz-focusring {
+  outline: auto;
 }
 
 table {
@@ -32230,6 +32242,85 @@ video {
 
 .content-none {
   content: none;
+}
+
+* {
+  margin:0;
+  font-family:"Lato", sans-serif;
+}
+
+body {
+  margin:0;
+  overflow-x:hidden;
+  background-color: #f7fbfd;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul {
+  overflow:hidden;
+  list-style-type:none;
+  margin:0;
+  padding:0 40px;
+}
+
+nav ol {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+
+#navbar nav{
+  line-height:normal;
+}
+
+#navbar {
+  background-color:rgba(0, 0, 0, 0.5);
+  text-transform:uppercase;
+  font-family:"Open Sans", sans-serif;
+  margin:0;
+  width:100%;
+  overflow:hidden;
+  position:fixed;
+  top:0;
+}
+
+#navbar li {
+  float:right;
+  margin:0 15px 0 0;
+}
+
+#navbar li a {
+  display:block;
+  color:white;
+  text-align:center;
+  padding:30px 30px;
+  text-decoration:none;
+  font-size:14px;
+  height:auto;
+}
+
+#navbar li a:hover:not(.active) {
+  background-color:#111;
+}
+
+#navbar img {
+  height:auto;
+  width:auto;
+  max-width:72px;
+  max-height:72px;
+  padding-top:7.5px;
+}
+
+#navbar form{
+  display:none;
+  width:100%;
+  margin:0;
+  padding:0;
+}
+
+#navbar ul .dropdown {
+  display:none;
 }
 
 @media (min-width: 640px) {
