@@ -28,3 +28,5 @@ nav ol { margin:0; padding:0; list-style:none;}
 #title li { height:120px; list-style-type:none; display:inline; }
 #title .h1 { margin:0 0 80px 0; font-family:'Lato';-webkit-filter: drop-shadow(4px 4px 4px #333); filter: drop-shadow(4px 4px 4px #333);  }
 #title .btn { transition: 0.3s; padding:25px 35px 27px; font-size:1.2rem; border-radius:50px; border-style: solid; border-width:3px; font-family: 'Lato'; margin: 0 20px; }
+
+#circle1 { width: 24rem; height: 24rem; }
