@@ -1,5 +1,5 @@
 const imageUpload = document.getElementById('imageUpload')
-let labels 
+let labels
 
 Promise.all([
   faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
@@ -7,9 +7,11 @@ Promise.all([
   faceapi.nets.ssdMobilenetv1.loadFromUri('/models')
 ]).then(start)
 
-
-function start() {
+async function start() {
   let image, canvas, container
+  const labeledFaceDescriptors = await loadLabeledImages()
+  const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6)
+  document.body.append('Loaded')
   imageUpload.addEventListener('change', async () => {
     if(!container) {
       container = document.createElement('div')
@@ -20,16 +22,17 @@ function start() {
     if (image) image.remove()
     if (canvas) canvas.remove()
     image = await faceapi.bufferToImage(imageUpload.files[0])
-    container.append(image) 
+    container.append(image)
     canvas = faceapi.createCanvasFromMedia(image)
     container.append(canvas)
-    const displaySize = {width: image.width, height: image.height }
+    const displaySize = { width: image.width, height: image.height }
     faceapi.matchDimensions(canvas, displaySize)
     const detections = await faceapi.detectAllFaces(image).withFaceLandmarks().withFaceDescriptors()
-    const resizedDetections = faceapi.resizeResults(detections, displaySize) 
-    resizedDetections.forEach(detection => {
-      const box = detection.detection.box
-      const drawBox = new faceapi.draw.DrawBox(box, {label: 'Face'})
+    const resizedDetections = faceapi.resizeResults(detections, displaySize)
+    const results = resizedDetections.map(d => faceMatcher.findBestMatch(d.descriptor))
+    results.forEach((result, i) => {
+      const box = resizedDetections[i].detection.box
+      const drawBox = new faceapi.draw.DrawBox(box, { label: result.toString() })
       drawBox.draw(canvas)
     })
   })
@@ -45,10 +48,13 @@ function loadLabeledImages() {
         const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
         descriptions.push(detections.descriptor)
       }
+
       return new faceapi.LabeledFaceDescriptors(label, descriptions)
     })
   )
 }
+
+
 
 
 
