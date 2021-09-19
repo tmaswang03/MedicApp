@@ -49,6 +49,10 @@ def faceRecognition():
 def getstarted():
     return render_template("getstarted.html")
 
+@app.route("/login.html")
+def login():
+    return render_template("login.html")
+
 @app.route("/submit_data")
 def submit():
     storeScore("sophii.asun#6432", "1")

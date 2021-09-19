@@ -4,18 +4,18 @@
 
 * { margin:0; font-family:"Lato", sans-serif; }
 
-body { margin:0; overflow-x:hidden; background-color: #00011c; align-items: center; justify-content: center; }
+.body1 { margin:0; overflow-x:hidden; background-color: #00011c; align-items: center; justify-content: center; }
 
 nav ul { overflow:hidden; list-style-type:none; margin:0; padding:0 40px; align-items: center; justify-content: center; }
 nav ol { margin:0; padding:0; list-style:none;}
-#navbar nav{ line-height:normal; }
-#navbar { background-color:rgba(255, 255, 255, 0.3); text-transform:uppercase; font-family:"Open Sans", sans-serif; margin:0; width:100%; overflow:hidden; position:fixed; top:0; justify-content: center; vertical-align: center; }
-#navbar li { float:right; margin:0 15px 0 0; }
-#navbar li a { display:block; color:white; text-align:center; padding:3vmin 3vmin; text-decoration:none; font-size:14px; height:auto; }
-#navbar li a:hover:not(.active) { background-color:rgba(255, 255, 255, 0.35); }
-#navbar img { height:100px; width:300px; max-height: 6vmin; max-width: 10vmin; align-self: center; margin-top:0.6vmin; }
-#navbar form{display:none; width:100%; margin:0; padding:0;}
-#navbar ul .dropdown { display:none; }
+#navbar1 nav{ line-height:normal; }
+#navbar1 { background-color:rgba(255, 255, 255, 0.3); text-transform:uppercase; font-family:"Open Sans", sans-serif; margin:0; width:100%; overflow:hidden; position:fixed; top:0; justify-content: center; vertical-align: center; }
+#navbar1 li { float:right; margin:0 15px 0 0; }
+#navbar1 li a { display:block; color:white; text-align:center; padding:3vmin 3vmin; text-decoration:none; font-size:14px; height:auto; }
+#navbar1 li a:hover:not(.active) { background-color:rgba(255, 255, 255, 0.35); }
+#navbar1 img { height:100px; width:300px; max-height: 6vmin; max-width: 10vmin; align-self: center; margin-top:0.6vmin; }
+#navbar1 form{display:none; width:100%; margin:0; padding:0;}
+#navbar1 ul .dropdown { display:none; }
 
 #pageintro{padding:200px 0 270px;}
 #pageintro article{display:block; max-width:75%; margin:0 auto; text-transform:capitalize; text-align:center;}
