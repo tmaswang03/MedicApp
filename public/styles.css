@@ -6330,6 +6330,7 @@ video {
   height: 24rem;
 }
 
+
 .h-auto {
   height: auto;
 }
@@ -6700,6 +6701,14 @@ video {
 
 .w-96 {
   width: 24rem;
+}
+
+.w-200 {
+  width: 30rem;
+}
+
+.h-200 {
+  height: 30rem;
 }
 
 .w-max {
