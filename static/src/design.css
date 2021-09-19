@@ -13,7 +13,7 @@ nav ol { margin:0; padding:0; list-style:none;}
 #navbar1 li { float:right; margin:0 15px 0 0; }
 #navbar1 li a { display:block; color:white; text-align:center; padding:3vmin 3vmin; text-decoration:none; font-size:14px; height:auto; }
 #navbar1 li a:hover:not(.active) { background-color:rgba(255, 255, 255, 0.35); }
-#navbar1 img { height:100px; width:300px; max-height: 6vmin; max-width: 10vmin; align-self: center; margin-top:0.6vmin; }
+#navbar1 img { height:100px; width:300px; max-height: 6vmin; max-width: 10vmin; align-self: center; margin-top:1vmin; }
 #navbar1 form{display:none; width:100%; margin:0; padding:0;}
 #navbar1 ul .dropdown { display:none; }
 
