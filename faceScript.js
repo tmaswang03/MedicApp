@@ -40,13 +40,12 @@ async function start() {
 }
 
 function loadLabeledImages() {
-  // labels = ['Black Widow', 'Captain America', 'Captain Marvel', 'Hawkeye', 'Jim Rhodes', 'Thor', 'Tony Stark']
   labels = ['Justin boober']
   return Promise.all(
     labels.map(async label => {
       const descriptions = []
       for (let i = 1; i <= 2; i++) {
-        const img = await faceapi.fetchImage(`https://i.imgur.com/gTelW9K.jpg`)
+        const img = await faceapi.fetchImage(`https://i.imgur.com/HMG0HBe.jpg`)
         const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
         descriptions.push(detections.descriptor)
       }
