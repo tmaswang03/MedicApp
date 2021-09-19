@@ -19,7 +19,7 @@ def storeScore(data, filename):
     with pyodbc.connect(driverstr) as conn:
         with conn.cursor() as cursor:
 
-            cursor.execute("insert into medicapp (name,email,password,phone,address,city,country,state,zipcode,url) Values ('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(data['full_name'],data['email'],data['password'],data['phone_number'],data['address'],data['city'],data['country'],data['state'],data['zipcode'],filename))
+            cursor.execute("insert into medicapp (name,email,password,phone,address,city,country,state,zipcode,url) Values ('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(data['full_name'],data['email'],data['password'],data['phone_number'],data['address'],data['city'],data['country'],data['state'],data['zipcode'],data['img_url']))
             # cnt = cursor.execute("select count(*) as cnt from vibeScores where username = '" + str(name) + "'").fetchone().cnt
             # if cnt > 0:  # user exists, update
             #     cursor.execute("update vibeScores set recent = '" + str(score) + "' where username = '" + str(name) + "'")
@@ -79,9 +79,9 @@ def submit():
     if request.method == 'POST':
         data = request.form
         
-        file = request.files['myPicture']
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-        storeScore(data, file.filename)
+        # file = request.files['myPicture']
+        # if file and allowed_file(file.filename):
+        #     filename = secure_filename(file.filename)
+        #     file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        storeScore(data)
         return redirect('/editProfile.html')
