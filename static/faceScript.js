@@ -12,7 +12,6 @@ async function start() {
   let image, canvas, container
   const labeledFaceDescriptors = await loadLabeledImages()
   const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6)
-  document.body.append('Loaded')
   imageUpload.addEventListener('change', async () => {
     if(!container) {
       container = document.createElement('div')
@@ -41,7 +40,7 @@ async function start() {
 
 function loadLabeledImages() {
   // labels = ['Black Widow', 'Captain America', 'Captain Marvel', 'Hawkeye', 'Jim Rhodes', 'Thor', 'Tony Stark']
-  labels = ['Justin boober']
+  labels = ['Justin Bieber: Known Illnesses include Lyme Disease, Chronic Anxiety.'] 
   return Promise.all(
     labels.map(async label => {
       const descriptions = []
