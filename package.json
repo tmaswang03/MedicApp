@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sophiiasun/HTN#readme",
   "dependencies": {
-    "tailwindcss": "^2.2.15"
+    "tailwindcss": "^2.2.15",
+    "tedious": "^12.2.0"
   }
 }
