@@ -1,5 +1,6 @@
 from flask import Flask,url_for
 from flask import render_template
+from flask import request
 import pyodbc
 # from decouple import config
 
@@ -7,12 +8,13 @@ import pyodbc
 # driverstr = "Driver={ODBC Driver 17 for SQL Server};Server=tcp:vibotserver.database.windows.net,1433;Database=ViBotDB;Uid=vibot2021;Pwd=BCx5D2fH9rmVx@a;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
 TOKEN="ODM1Mjk5NTU2MDEwODg1MTMw.YINbVQ.LW-LA4oM-699hBrHs0ta6avUqlY"
 
-def storeScore(name, score):
+def storeScore(data):
     # driverstr = config('driverstr')
     driverstr="Driver={ODBC Driver 17 for SQL Server};Server=tcp:vibotserver.database.windows.net,1433;Database=ViBotDB;Uid=vibot2021;Pwd=BCx5D2fH9rmVx@a;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
     with pyodbc.connect(driverstr) as conn:
         with conn.cursor() as cursor:
-            cursor.execute("insert into test (id, names, info) Values (2, 'name2', 'info2');")
+
+            cursor.execute("insert into medicapp (name,email,password,phone,address,city,country,state,zipcode) Values ('{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(data['full_name'],data['email'],data['password'],data['phone_number'],data['address'],data['city'],data['country'],data['state'],data['zipcode']))
             # cnt = cursor.execute("select count(*) as cnt from vibeScores where username = '" + str(name) + "'").fetchone().cnt
             # if cnt > 0:  # user exists, update
             #     cursor.execute("update vibeScores set recent = '" + str(score) + "' where username = '" + str(name) + "'")
@@ -53,7 +55,14 @@ def getstarted():
 def login():
     return render_template("login.html")
 
-@app.route("/submit_data")
+@app.route("/submit_data", methods=['POST','GET'])
 def submit():
-    storeScore("sophii.asun#6432", "1")
-    return "success"
+    print(request.method)
+    if request.method == 'POST':
+        print("hello")
+        data = request.form
+        print(data['full_name'])
+        print(data)
+        storeScore(data)
+
+    return 'success'
