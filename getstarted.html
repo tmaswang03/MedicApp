@@ -6,11 +6,12 @@
       <meta name="viewport" content="width=device-width,initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Medicapp</title>
-
-      <link href="public/styles.css" rel="stylesheet">
-      <link href="src/design.css" rel="stylesheet" type="text/css" media="all">
+      <link rel="stylesheet" href="{{ url_for('static', filename='src/design.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='public/styles.css') }}">
+      <!-- <link href="public/styles.css" rel="stylesheet"> -->
+      <!-- <link href="src/design.css" rel="stylesheet" type="text/css" media="all"> -->
       <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-      <link rel="stylesheet" href="aos-master/dist/aos.css">
+      <!-- <link rel="stylesheet" href="aos-master/dist/aos.css"> -->
 
       <script type="text/javascript" src="./js/imgur.js"></script>
       <script type="text/javascript" src="./js/upload.js"></script>

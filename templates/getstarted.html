@@ -10,10 +10,10 @@
       <link rel="stylesheet" href="{{ url_for('static', filename='src/design.css') }}">
       <link rel="stylesheet" href="{{ url_for('static', filename='public/styles.css') }}">
 
-      <!-- <link href="public/styles.css" rel="stylesheet">
-      <link href="src/design.css" rel="stylesheet" type="text/css" media="all">
+      <!-- <link href="public/styles.css" rel="stylesheet"> -->
+      <!-- <link href="src/design.css" rel="stylesheet" type="text/css" media="all"> -->
       <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-      <link rel="stylesheet" href="aos-master/dist/aos.css"> -->
+      <!-- <link rel="stylesheet" href="aos-master/dist/aos.css">  -->
   </head>
 <body>
   <nav id="navbar" style="z-index:9999"> <!-- NAVBAR -->
@@ -40,7 +40,7 @@
                 <p class="font-medium text-6xl">Register Now.</p>
                 <p class="font-medium text-lg" style="margin-top: 1vmin; margin-bottom: 1vmin;">Join soon-to-be millions of users, whose lives can be saved with the swipe of a camera.</p>
                 <div class="inline-flex items-end"><button class="border-2 border-blue-500 rounded-lg font-bold text-blue-500 px-9 py-3 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white" style="margin-bottom:2vmin">Already Have an Account? <br>Sign In Here.</button></div>
-                <div><img src="images/logo4.png"></img></div>
+                <div><img src="{{ url_for('static', filename='images/logo4.png') }}"></img></div>
               </div>
 
               <div class="lg:col-span-2">

@@ -8,12 +8,10 @@
         <title>Medicapp</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='src/design.css') }}">
         <link rel="stylesheet" href="{{ url_for('static', filename='public/styles.css') }}">
-        <!-- <script defer src = "face-api.min.js"></script>
-        <script defer src = "faceScript.js"></script> -->
-        <!-- <link href="public/styles.css" rel="stylesheet">
-        <link href="src/design.css" rel="stylesheet" type="text/css" media="all">
+        <!-- <link href="public/styles.css" rel="stylesheet"> -->
+        <!-- <link href="src/design.css" rel="stylesheet" type="text/css" media="all"> -->
         <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-        <link rel="stylesheet" href="aos-master/dist/aos.css"> -->
+        <!-- <link rel="stylesheet" href="aos-master/dist/aos.css"> -->
     </head>
     <body>
         <div class="wrapper" style="background-image:url('{{ url_for('static', filename='images/title.jpg') }}'); background-size:100% 100%; filter: blur(4px); background-attachment: fixed; transform: scale(1.1); ">
@@ -21,7 +19,7 @@
         </div>
     
         <article id="title" style="z-index:2;">
-            <h1 style="margin:0px 0 50px 0; font-family: 'Lato';" ><div style="color:white;font-size:30px;font-weight:1000;margin:0;"><i>"Wherever the art of medine is loved, there is also a love of humanity."</i></div></h1>
+            <h1 style="margin:0px 0 50px 0; font-family: 'Lato', sans-serif;" ><div style="color:white;font-size:30px;font-weight:1000;margin:0;"><i>"Wherever the art of medine is loved, there is also a love of humanity."</i></div></h1>
             <h1><div class="h1 text-8xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-white to-indigo-100">MEDICAPP</div></h1>
             <footer>
                 <ul style="margin-bottom: 100px;">
@@ -32,7 +30,7 @@
         </article>
         <nav id="navbar" style="z-index:9999"> <!-- NAVBAR -->
             <ul>
-                <li style="float:left;"><img src="{{ url_for('static', filename='images/logo4.jpg') }}"></img></li>
+                <li style="float:left;"><img src="{{ url_for('static', filename='images/logo4.png') }}"></img></li>
                 <li><a href="faceRecognition.html"> Upload Image </a></li>
                 <li><a href="getstarted.html">Get Started</a></li>
                 <li><a href="about.html">About</a></li>

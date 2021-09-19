@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Face Recognition</title>
-        
-    <link rel="stylesheet" href="public/styles.css">
-    <link href="src/design.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='src/design.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='public/styles.css') }}">
+    <!-- <link rel="stylesheet" href="public/styles.css"> -->
+    <!-- <link href="src/design.css" rel="stylesheet" type="text/css" media="all"> -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-    <link rel="stylesheet" href="aos-master/dist/aos.css">
+    <!-- <link rel="stylesheet" href="aos-master/dist/aos.css">  -->
 
     <body>
         <nav id="navbar" style="z-index:9999"> <!-- NAVBAR -->
             <ul>
-                <li style="float:left;"><img src="images/logo4.png"></img></li>
+                <li style="float:left;"><img src="{{ url_for('static', filename='images/logo4.png') }}g"></img></li>
                 <li><a href="faceRecognition.html"> Upload Image </a></li>
                 <li><a href="getstarted.html">Get Started</a></li>
                 <li><a href="about.html">About</a></li>

@@ -6,16 +6,17 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Medicapp</title>
-
-    <link href="public/styles.css" rel="stylesheet">
-    <link href="src/design.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='src/design.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='public/styles.css') }}">
+    <!-- <link href="public/styles.css" rel="stylesheet"> -->
+    <!-- <link href="src/design.css" rel="stylesheet" type="text/css" media="all"> -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-    <link rel="stylesheet" href="aos-master/dist/aos.css">
+    <!-- <link rel="stylesheet" href="aos-master/dist/aos.css">  -->
 </head>
 <body>
   <nav id="navbar" style="z-index:9999"> <!-- NAVBAR -->
     <ul>
-        <li style="float:left;"><img src="images/logo4.png"></img></li>
+        <li style="float:left;"><img src="{{ url_for('static', filename='images/logo4.png') }}"></img></li>
         <li><a href="faceRecognition.html">Upload Image </a></li>
         <li><a href="getstarted.html">Get Started</a></li>
         <li><a href="about.html">About</a></li>
@@ -24,7 +25,7 @@
     </ul>
   </nav>
 
-    <div class="wrapper" style="background-image:url('images/facerecognition.jpeg'); background-size:100% 100%; filter: blur(4px); background-attachment: fixed; transform: scale(1.1); ">
+    <div class="wrapper" style="background-image:url('{{ url_for('static', filename='images/facerecognition.jpeg') }}'); background-size:100% 100%; filter: blur(4px); background-attachment: fixed; transform: scale(1.1); ">
         <div id="pageintro" class="hoc clear" style="background-color:rgba(0, 0, 0, 0.3);width:100vw;height:97vh;"></div>
     </div>
     <article id="title" style="z-index:2;">
@@ -34,7 +35,7 @@
 
     <section class="about-section">
         <div id="about-card" class="about-card">
-            <div><img class="about-image" src="images/iphone.png"></div>
+            <div><img class="about-image" src="{{ url_for('static', filename='images/iphone.png') }}"></div>
             <div class="text-gray-100" style="text-align:left; width:60vw; padding:20vmin 0;">
                 <p class="font-medium text-6xl">Mobile Face Recognition.</p>
                 <p class="font-medium text-lg" style="margin-top: 1vmin; margin-bottom: 1vmin;">The face recognition uses a public face recognition ai library known as face-api js. All previous account's pictures and information are kept in a database. By utilizing the faceMatcher to compare descriptors of faces (eg: compuing euclidean distance between key points on face) the AI provides an accurate match for the subject in any photo.</p>
