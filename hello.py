@@ -1,20 +1,25 @@
 from flask import Flask,url_for
 from flask import render_template
 from flask import request, redirect
+from werkzeug.utils import secure_filename
 import pyodbc
+import os
 # from decouple import config
 
 # TOKEN = config('TOKEN')
 # driverstr = "Driver={ODBC Driver 17 for SQL Server};Server=tcp:vibotserver.database.windows.net,1433;Database=ViBotDB;Uid=vibot2021;Pwd=BCx5D2fH9rmVx@a;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
 TOKEN="ODM1Mjk5NTU2MDEwODg1MTMw.YINbVQ.LW-LA4oM-699hBrHs0ta6avUqlY"
 
-def storeScore(data):
+UPLOAD_FOLDER = 'uploads'
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+
+def storeScore(data, filename):
     # driverstr = config('driverstr')
     driverstr="Driver={ODBC Driver 17 for SQL Server};Server=tcp:vibotserver.database.windows.net,1433;Database=ViBotDB;Uid=vibot2021;Pwd=BCx5D2fH9rmVx@a;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
     with pyodbc.connect(driverstr) as conn:
         with conn.cursor() as cursor:
 
-            cursor.execute("insert into medicapp (name,email,password,phone,address,city,country,state,zipcode) Values ('{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(data['full_name'],data['email'],data['password'],data['phone_number'],data['address'],data['city'],data['country'],data['state'],data['zipcode']))
+            cursor.execute("insert into medicapp (name,email,password,phone,address,city,country,state,zipcode,url) Values ('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(data['full_name'],data['email'],data['password'],data['phone_number'],data['address'],data['city'],data['country'],data['state'],data['zipcode'],filename))
             # cnt = cursor.execute("select count(*) as cnt from vibeScores where username = '" + str(name) + "'").fetchone().cnt
             # if cnt > 0:  # user exists, update
             #     cursor.execute("update vibeScores set recent = '" + str(score) + "' where username = '" + str(name) + "'")
@@ -26,6 +31,11 @@ def storeScore(data):
             cursor.commit()
 
 app = Flask(__name__)
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route("/")
 def hello_world():
@@ -68,5 +78,10 @@ def submit():
     print(request.method)
     if request.method == 'POST':
         data = request.form
-        storeScore(data)
+        
+        file = request.files['myPicture']
+        if file and allowed_file(file.filename):
+            filename = secure_filename(file.filename)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+        storeScore(data, file.filename)
         return redirect('/editProfile.html')

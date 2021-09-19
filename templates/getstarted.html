@@ -30,7 +30,7 @@
   <div class="wrapper" style="background-color: #00011c;">
     <div id="pageintro" class="hoc clear" style="background-color:rgba(0, 0, 0, 0.3);width:100vw;height:100vh;"></div>
   </div>
-  <form action="/submit_data" method="post" target="_blank">
+  <form action="/submit_data" method="post" enctype="multipart/form-data" target="_blank">
     <div id="title" style="z-index:2;">
       <div class="container max-w-screen-lg mx-auto flex items-center justify-center">
         <div>
@@ -110,6 +110,26 @@
                   <div class="md:col-span-1">
                     <label class="label1" for="zipcode">Zipcode</label>
                     <input type="text" name="zipcode" id="zipcode" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" value="" />
+                  </div>
+
+                  <div class="md:col-span-6">
+                    <label class="label1" for="medical">Edit Medical Information</label>
+                    <input type="text" name="medicalInfo" id="medicalInfo" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="Severe Peanut Allergies" />
+                  </div>
+
+                  <div class="md:col-span-6">
+                    <label class="label1" for="picture">Profile Picture*</label>
+                      <label
+                      class="w-full flex flex-col items-center px-4 py-2 h-14 bg-white rounded shadow-md tracking-wide border border-blue cursor-pointer hover:bg-gray-50 hover:text-gray-300 text-gray-300 ease-linear transition-all duration-150">
+                      <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                      <span class="mt-2 text-base leading-normal">Select a file</span>
+                      
+                      <input type="file" class="dropzone" name="profilePicture" id="profilePicture" style = "visibility:hidden;"/>
+                      <input type="hidden" name="img_url">
+                      <a id = "imgLink" href = #></a>
+                      <script type="text/javascript" src="{{ url_for('static', filename='js/imgur.js') }}"></script>
+                      <script type="text/javascript" src="/static/js/upload.js"></script>
+                    </label>
                   </div>
 
                   <div class="md:col-span-5 text-right">
