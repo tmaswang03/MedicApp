@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Face Recognition</title>
+        
+    <link rel="stylesheet" href="public/styles.css">
+    <link href="src/design.css" rel="stylesheet" type="text/css" media="all">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="stylesheet" href="aos-master/dist/aos.css">
+
+    <body>
+        <nav id="navbar" style="z-index:9999"> <!-- NAVBAR -->
+            <ul>
+                <li style="float:left;"><img src="images/logo4.png"></img></li>
+                <li><a href="faceRecognition.html"> Upload Image </a></li>
+                <li><a href="getstarted.html">Get Started</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="editProfile.html">Edit Profile</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </body>
+
+    <script defer src = "face-api.min.js"></script>
+    <script defer src = "faceScript.js"></script>
+  </head>
+  <body>
+    <style>
+        canvas {
+            position: absolute; 
+            top: 1rem; left: 2rem; 
+        }
+        body {
+            justify-items: center;
+            align-items: center;
+        }
+        #container {
+            max-width: 56rem;
+            padding-top: 1rem; padding-bottom: 1rem;
+            padding-left: 2rem; padding-right: 2rem; 
+            background-color: white;
+            --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            border-radius: 0.5rem;
+            margin: 8; 
+        }
+        #gridContainer {
+            max-width: 56rem;
+            padding: 3px; 
+            background-color: white;
+            display: grid; 
+            --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+            border-radius: 0.5rem;
+            margin-top: 10rem; margin-bottom: 5rem;
+            margin-left: 12rem; 
+            justify-items: center; 
+            align-items: center; 
+        }
+        </style>
+        <div id="gridContainer"> 
+            <div class="top-11 mt-10 flex m-8 items-center justify-center bg-grey-lighter">
+                <label class="w-48 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-blue-400">
+                    <svg class="w-8 h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                        <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+                    </svg>
+                    <span class="mt-2 text-base leading-normal">Select a file</span>
+                    <input type='file' id = "imageUpload" class="hidden" />
+                </label>
+            </div>
+        </div>
+  </body>
+</html>

@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/sophiiasun/HTN#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
     "tailwindcss": "^2.2.15",
     "tedious": "^12.2.0"
   }

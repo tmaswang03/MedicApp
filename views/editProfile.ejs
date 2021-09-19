@@ -1,0 +1,153 @@
+<!-- python3 -m http.server -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Medicapp</title>
+
+      <link href="public/styles.css" rel="stylesheet">
+      <link href="src/design.css" rel="stylesheet" type="text/css" media="all">
+      <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+      <link rel="stylesheet" href="aos-master/dist/aos.css">
+  </head>
+<body>
+  <nav id="navbar" style="z-index:9999"> <!-- NAVBAR -->
+    <ul>
+        <li style="float:left;"><img src="images/logo4.png"></img></li>
+        <li><a href="faceRecognition.html">Upload Image </a></li>
+        <li><a href="getstarted.html">Get Started</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="editProfile.html">Edit Profile</a></li>
+        <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrapper" style="background-color: #00011c;">
+    <div id="pageintro" class="hoc clear" style="background-color:rgba(0, 0, 0, 0.3);width:100vw;height:100vh;"></div>
+  </div>
+
+  <div id="title" style="z-index:2;">
+    <div class="container max-w-screen-lg mx-auto flex items-center justify-center">
+      <div>
+        <div class="bg-white rounded-xl shadow-lg p-4 px-4 md:p-8 mb-6">
+          <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+            <div class="text-gray-600" style="text-align: left;">
+              <p class="font-medium text-6xl mb-10">Edit Profile.</p>
+              <div><img src="images/logo4.png"></img></div>
+            </div>
+
+            <div class="lg:col-span-2">
+              <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                <div class="md:col-span-5">
+                  <label class="label1" for="full_name">Edit Name</label>
+                  <input type="text" name="full_name" id="full_name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="John Doe"/>
+                </div>
+
+                <div class="md:col-span-5"> 
+                  <label class="label1" for="email">Edit Email Address</label>
+                  <input type="text" name="email" id="email" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="email@domain.com" />
+                </div>
+
+                <div class="md:col-span-5">
+                    <label class="label1" for="email">Change Password</label>
+                    <input type="password" name="password" id="password" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="Password" />
+                </div>
+                
+                <div class="md:col-span-5">
+                    <label class="label1" for="email">Edit Phone Number</label>
+                    <input type="text" name="phone_number" id="phone_number" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="000 000 0000" />
+                </div>
+
+                <div class="md:col-span-3">
+                  <label class="label1" for="address">Edit Address / Street Number</label>
+                  <input type="text" name="address" id="address" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="1234 JohnDoe Road" />
+                </div>
+
+                <div class="md:col-span-2">
+                  <label class="label1" for="city">Edit City</label>
+                  <input type="text" name="city" id="city" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="Washington" />
+                </div>
+
+                <div class="md:col-span-2">
+                  <label class="label1" for="country">Edit Country / Region</label>
+                  <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
+                    <input name="country" id="country" placeholder="Country" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                    <button tabindex="-1" class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
+                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                    <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
+                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="md:col-span-2">
+                  <label class="label1" for="state">Edit State / Province</label>
+                  <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
+                    <input name="state" id="state" placeholder="State" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                    <button tabindex="-1" class="cursor-pointer outline-none focus:outline-none transition-all text-gray-300 hover:text-red-600">
+                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                    <button tabindex="-1" for="show_more" class="cursor-pointer outline-none focus:outline-none border-l border-gray-200 transition-all text-gray-300 hover:text-blue-600">
+                      <svg class="w-4 h-4 mx-2 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="md:col-span-1">
+                  <label class="label1" for="zipcode">Zipcode</label>
+                  <input type="text" name="zipcode" id="zipcode" class="transition-all flex items-center h-10 border mt-1 rounded px-4 w-full bg-gray-50" placeholder="" value="" />
+                </div>
+
+                <div class="md:col-span-6">
+                  <label class="label1" for="medical">Edit Medical Information</label>
+                  <input type="text" name="medicalInfo" id="medicalInfo" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="Severe Peanut Allergies" />
+                </div>
+
+                <div class="md:col-span-6">
+                  <label class="label1" for="picture">Edit Profile Picture</label>
+                    <label
+                    class="w-full flex flex-col items-center px-4 py-2 h-14 bg-white rounded shadow-md tracking-wide border border-blue cursor-pointer hover:bg-gray-50 hover:text-gray-300 text-gray-300 ease-linear transition-all duration-150">
+                    <i class="fas fa-cloud-upload-alt fa-3x"></i>
+                    <span class="mt-2 text-base leading-normal">Select a file</span>
+                    <input type='file' class="hidden" name="profilePicture" id="profilePicture"/>
+                  </label>
+                </div>
+
+                <div class="md:col-span-5 text-right">
+                  <div class="label1" class="inline-flex items-end">
+                    <button class="border-2 border-blue-500 rounded-lg font-bold text-blue-500 px-9 py-3 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white" style="margin-top:1vmin">Save Edits</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>  
+
+
+  <div class="bg-gray-50 min-h-screen flex items-center justify-center px-16">
+    <div class="w-full max-w-4xl">
+      <div id = "circle1"></div>
+      <div id = "circle2"></div>
+      <div id = "circle3"></div>
+      <div id = "circle4"></div>
+      <div id = "circle5"></div>
+      <div id = "circle6"></div>
+    </div>
+  </div>  
+
+<body>
+</body>
+</html>
