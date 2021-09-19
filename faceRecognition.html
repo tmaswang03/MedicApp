@@ -11,29 +11,16 @@
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link rel="stylesheet" href="aos-master/dist/aos.css">
 
-    <body>
-        <nav id="navbar" style="z-index:9999"> <!-- NAVBAR -->
-            <ul>
-                <li style="float:left;"><img src="images/logo4.png"></img></li>
-                <li><a href="faceRecognition.html"> Upload Image </a></li>
-                <li><a href="getstarted.html">Get Started</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="editProfile.html">Edit Profile</a></li>
-                <li><a href="#">Home</a></li>
-            </ul>
-        </nav>
-    </body>
-
-    <script defer src = "face-api.min.js"></script>
-    <script defer src = "faceScript.js"></script>
-  </head>
-  <body>
-    <style>
+<style>
         canvas {
             position: absolute; 
             top: 1rem; left: 2rem; 
         }
         body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: "white";
             justify-items: center;
             align-items: center;
         }
@@ -61,6 +48,23 @@
             align-items: center; 
         }
         </style>
+
+    <body>
+        <nav id="navbar" style="z-index:9999"> <!-- NAVBAR -->
+            <ul>
+                <li style="float:left;"><img src="images/logo4.png"></img></li>
+                <li><a href="faceRecognition.html"> Upload Image </a></li>
+                <li><a href="getstarted.html">Get Started</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="editProfile.html">Edit Profile</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </body>
+    <script defer src = "face-api.min.js"></script>
+    <script defer src = "faceScript.js"></script>
+  </head>
+  <body>
         <div id="gridContainer"> 
             <div class="top-11 mt-10 flex m-8 items-center justify-center bg-grey-lighter">
                 <label class="w-48 flex flex-col items-center px-4 py-6 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-blue-400">
