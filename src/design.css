@@ -35,112 +35,18 @@ nav ol { margin:0; padding:0; list-style:none;}
 .btn, .btn.inverse:hover{color:#FFFFFF; background-color:rgba(255,255,255, 0.3); border-color:rgba(255,255,255, 0.3);}
 .btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
 
-#circle1 { 
-    top: 30vh; 
-    left: 10vw; 
-    height: 40rem;
-    width: 40rem;
-    background-color: #ff0000;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute; 
-    filter: blur(24px);
-    opacity: 0.7; 
-    animation: blob 7s infinite; 
-}
-
-#circle2 { 
-    top: 30vh; 
-    left: 25vw; 
-    height: 40rem;
-    width: 40rem;
-    background-color: #1357be;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute; 
-    filter: blur(24px);
-    opacity: 0.7; 
-    animation: blob 7s infinite; 
-    animation-delay: 1s; 
-}
-
-#circle3 { 
-    top: 10vh; 
-    left: 15vw;
-    height: 40rem;
-    width: 40rem;
-    background-color: #061d95;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute; 
-    filter: blur(24px);
-    opacity: 0.7; 
-    animation: blob 7s infinite;
-    animation-delay: 2s;  
-}
-
-#circle4 { 
-    top: 10vh; 
-    left: 35vw;
-    height: 40rem;
-    width: 40rem;
-    background-color: #a54d05;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute; 
-    filter: blur(24px);
-    opacity: 0.7; 
-    animation: blob 7s infinite;
-    animation-delay: 3s;  
-}
-
-#circle5 { 
-    top: 30vh; 
-    left: 50vw;
-    height: 40rem;
-    width: 40rem;
-    background-color: #a55205;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute; 
-    filter: blur(24px);
-    opacity: 0.7; 
-    animation: blob 7s infinite;
-    animation-delay: 4s;  
-}
-
-#circle6 { 
-    top: 10vh; 
-    left: 50vw;
-    height: 40rem;
-    width: 40rem;
-    background-color: #a50505;
-    border-radius: 50%;
-    display: inline-block;
-    position: absolute; 
-    filter: blur(24px);
-    opacity: 0.7; 
-    animation: blob 7s infinite;
-    animation-delay: 5s;  
-}
+#circle1 { top: 30vh; left: 10vw; height: 40rem; width: 40rem; background-color: #ff0000; border-radius: 50%; display: inline-block; position: absolute; filter: blur(24px); opacity: 0.7; animation: blob 7s infinite; }
+#circle2 { top: 30vh; left: 25vw; height: 40rem; width: 40rem; background-color: #1357be; border-radius: 50%; display: inline-block; position: absolute; filter: blur(24px); opacity: 0.7; animation: blob 7s infinite; animation-delay: 1s; }
+#circle3 { top: 10vh; left: 15vw; height: 40rem; width: 40rem; background-color: #061d95; border-radius: 50%; display: inline-block; position: absolute; filter: blur(24px); opacity: 0.7; animation: blob 7s infinite; animation-delay: 2s; }
+#circle4 { top: 10vh; left: 35vw; height: 40rem; width: 40rem; background-color: #a54d05; border-radius: 50%; display: inline-block; position: absolute; filter: blur(24px); opacity: 0.7; animation: blob 7s infinite; animation-delay: 3s; }
+#circle5 { top: 30vh; left: 50vw; height: 40rem; width: 40rem; background-color: #a55205; border-radius: 50%; display: inline-block; position: absolute; filter: blur(24px); opacity: 0.7; animation: blob 7s infinite; animation-delay: 4s; }
+#circle6 { top: 10vh; left: 50vw; height: 40rem; width: 40rem; background-color: #a50505; border-radius: 50%; display: inline-block; position: absolute; filter: blur(24px); opacity: 0.7; animation: blob 7s infinite; animation-delay: 5s; }
 
 @keyframes blob {
-    0% {
-        transform: scale(1); 
-        transform: translate(0px, 0px); 
-    }
-    33% {
-        transform: scale(1.1); 
-        transform: translate(30px, 50px); 
-    }
-    66% {
-        transform: scale(0.9); 
-        transform: translate(-20px, 20px); 
-    }
-    100% {
-        transform: scale(1); 
-        transform: translate(0px, 0px); 
-    }
+    0% { transform: scale(1); transform: translate(0px, 0px); }
+    33% { transform: scale(1.1); transform: translate(30px, 50px); }
+    66% { transform: scale(0.9); transform: translate(-20px, 20px); }
+    100% { transform: scale(1); transform: translate(0px, 0px); }
 }
 
 
