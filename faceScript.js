@@ -1,4 +1,5 @@
 const imageUpload = document.getElementById('imageUpload')
+const gridContainer = document.getElementById('gridContainer')
 let labels
 
 Promise.all([
@@ -17,7 +18,7 @@ async function start() {
       container = document.createElement('div')
       container.id = "container"
       container.style.position = 'relative'
-      document.body.append(container)
+      gridContainer.append(container)
     }
     if (image) image.remove()
     if (canvas) canvas.remove()
