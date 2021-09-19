@@ -13,7 +13,7 @@ TOKEN="ODM1Mjk5NTU2MDEwODg1MTMw.YINbVQ.LW-LA4oM-699hBrHs0ta6avUqlY"
 UPLOAD_FOLDER = 'uploads'
 ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
-def storeScore(data, filename):
+def storeScore(data):
     # driverstr = config('driverstr')
     driverstr="Driver={ODBC Driver 17 for SQL Server};Server=tcp:vibotserver.database.windows.net,1433;Database=ViBotDB;Uid=vibot2021;Pwd=BCx5D2fH9rmVx@a;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
     with pyodbc.connect(driverstr) as conn:
