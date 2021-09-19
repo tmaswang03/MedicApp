@@ -21,10 +21,10 @@ var feedback = function(res) {
         get_link = res.data.link.replace(/^http:\/\//i, 'https://');
         document.querySelector('.status').classList.add('bg-success');
         var content =
-            'Image : ' + '<br><input name="image_url" class="image-url" value=\"' + get_link + '\"/>' 
+            'Image : ' + '<br><input class="image-url" value=\"' + get_link + '\"/>' 
              + '<img class="img" alt="Imgur-Upload" src=\"' + get_link + '\"/>';
-        document.getElementById("imgLink").innerHTML = get_link; 
-        console.log(document.getElementById("imgLink").innerHTML)
+        document.getElementById("img_url").value = get_link; 
+        // console.log(document.getElementById("imgLink").innerHTML)
         addImg('.status', content);
     }
 };
