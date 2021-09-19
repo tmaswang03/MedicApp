@@ -30,7 +30,7 @@
   <div class="wrapper" style="background-color: #00011c;">
     <div id="pageintro" class="hoc clear" style="background-color:rgba(0, 0, 0, 0.3);width:100vw;height:100vh;"></div>
   </div>
-  <form action="/submit_data" method="post" enctype="multipart/form-data" target="_blank">
+  <form action="/db.py" method="post" target="_blank">
     <div id="title" style="z-index:2;">
       <div class="container max-w-screen-lg mx-auto flex items-center justify-center">
         <div>
@@ -40,7 +40,7 @@
                 <p class="font-medium text-6xl">Register Now.</p>
                 <p class="font-medium text-lg" style="margin-top: 1vmin; margin-bottom: 1vmin;">Join soon-to-be millions of users, whose lives can be saved with the swipe of a camera.</p>
                 <div class="inline-flex items-end"><button class="border-2 border-blue-500 rounded-lg font-bold text-blue-500 px-9 py-3 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white" style="margin-bottom:2vmin">Already Have an Account? <br>Sign In Here.</button></div>
-                <div><img src="{{ url_for('static', filename='images/logo4.png') }}"></img></div>
+                <div><img src="images/logo4.png"></img></div>
               </div>
 
               <div class="lg:col-span-2">
@@ -116,7 +116,7 @@
                     <label class="label1" for="medical">Medical Information*</label>
                     <input type="text" name="medicalInfo" id="medicalInfo" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="" placeholder="Severe Peanut Allergies" />
                   </div>
-
+                  
                   <div class="md:col-span-6">
                     <label class="label1" for="picture">Profile Picture*</label>
                       <label
@@ -124,20 +124,21 @@
                       <i class="fas fa-cloud-upload-alt fa-3x"></i>
                       <span class="mt-2 text-base leading-normal">Select a file</span>
                       
-                      <input type="file" class="dropzone" name="profilePicture" id="profilePicture" style = "visibility:hidden;"/>
-                      <input type="hidden" name="img_url" id = "img_url">
-                      <a id = "imgLink" href = #></a>
-                      <script type="text/javascript" src="{{ url_for('static', filename='js/imgur.js') }}"></script>
-                      <script type="text/javascript" src="/static/js/upload.js"></script>
+                      <input type='file' class="dropzone" name="profilePicture" id="profilePicture" style = "visibility:hidden;"/>
+                      <input type='hidden' name="img_url">
+                      <a id="imgLink" href=#></a>
+                      <script type="text/javascript" src="./js/imgur.js"></script>
+                      <script type="text/javascript" src="./js/upload.js"></script>
                     </label>
                   </div>
+                
 
                   <div class="md:col-span-5 text-right">
                     <div class="label1" class="inline-flex items-end">
                       <button class="border-2 border-blue-500 rounded-lg font-bold text-blue-500 px-9 py-3 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white" style="margin-top:1vmin">Submit</button>
                     </div>
                   </div>
-                  
+
                 </div>
               </div>
             </div>
@@ -147,7 +148,7 @@
     </div>  
   </form>
 
-
+  <div class="bg-gray-50 min-h-screen flex items-center justify-center px-16">
     <div class="w-full max-w-4xl">
       <div id = "circle1"></div>
       <div id = "circle2"></div>
@@ -156,6 +157,7 @@
       <div id = "circle5"></div>
       <div id = "circle6"></div>
     </div>
+  </div>  
 
 <body>
 </body>
