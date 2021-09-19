@@ -4,13 +4,13 @@ function reportInfo(vars, showType = false) {
 }
 
 function addImg(ele, content) {
-    var myDIV = document.querySelector(ele);
-    var newContent = document.createElement('div');
-    newContent.innerHTML = content;
+    // var myDIV = document.querySelector(ele);
+    // var newContent = document.createElement('div');
+    // newContent.innerHTML = content;
 
-    while (newContent.firstChild) {
-        myDIV.appendChild(newContent.firstChild);
-    }
+    // while (newContent.firstChild) {
+    //     myDIV.appendChild(newContent.firstChild);
+    // }
 }
 
 var feedback = function(res) {
