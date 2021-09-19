@@ -35,7 +35,9 @@
         <div class="bg-white rounded-xl shadow-lg p-4 px-4 md:p-8 mb-6">
           <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
             <div class="text-gray-600" style="text-align: left;">
-              <p class="font-medium text-6xl mb-10">Edit Profile.</p>
+              <p class="font-medium text-6xl">Register Now.</p>
+              <p class="font-medium text-lg" style="margin-top: 1vmin; margin-bottom: 1vmin;">Fill in the fields you wish to edit, and leave the rest blank.</p>
+              <!-- <div class="inline-flex items-end"><button class="border-2 border-blue-500 rounded-lg font-bold text-blue-500 px-9 py-3 transition duration-300 ease-in-out hover:bg-blue-500 hover:text-white" style="margin-bottom:2vmin">Already Have an Account? <br>Sign In Here.</button></div> -->
               <div><img src="{{ url_for('static', filename='images/logo4.png') }}"></img></div>
             </div>
 
@@ -114,12 +116,17 @@
                 </div>
 
                 <div class="md:col-span-6">
-                  <label class="label1" for="picture">Edit Profile Picture</label>
+                  <label class="label1" for="picture">Profile Picture*</label>
                     <label
                     class="w-full flex flex-col items-center px-4 py-2 h-14 bg-white rounded shadow-md tracking-wide border border-blue cursor-pointer hover:bg-gray-50 hover:text-gray-300 text-gray-300 ease-linear transition-all duration-150">
                     <i class="fas fa-cloud-upload-alt fa-3x"></i>
                     <span class="mt-2 text-base leading-normal">Select a file</span>
-                    <input type='file' class="hidden" name="profilePicture" id="profilePicture"/>
+                    
+                    <input type='file' class="dropzone" name="profilePicture" id="profilePicture" style = "visibility:hidden;"/>
+                    
+                    <a id = "imgLink" href = #></a>
+                    <script type="text/javascript" src="./static/imgur.js"></script>
+                    <script type="text/javascript" src="./static/upload.js"></script>
                   </label>
                 </div>
 

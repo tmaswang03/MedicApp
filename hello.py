@@ -1,6 +1,6 @@
 from flask import Flask,url_for
 from flask import render_template
-from flask import request
+from flask import request, redirect
 import pyodbc
 # from decouple import config
 
@@ -67,10 +67,6 @@ def login():
 def submit():
     print(request.method)
     if request.method == 'POST':
-        print("hello")
         data = request.form
-        print(data['full_name'])
-        print(data)
         storeScore(data)
-
-    return 'success'
+        return redirect('/editProfile.html')
