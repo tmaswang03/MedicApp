@@ -24,7 +24,7 @@ var feedback = function(res) {
             'Image : ' + '<br><input class="image-url" value=\"' + get_link + '\"/>' 
              + '<img class="img" alt="Imgur-Upload" src=\"' + get_link + '\"/>';
         document.getElementById("imgLink").innerHTML = get_link; 
-        //console.log(document.getElementById("imgLink").innerHTML)
+        console.log(document.getElementById("imgLink").innerHTML)
         addImg('.status', content);
     }
 };
