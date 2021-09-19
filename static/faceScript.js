@@ -3,9 +3,9 @@ const gridContainer = document.getElementById('gridContainer')
 let labels
 
 Promise.all([
-  faceapi.nets.faceRecognitionNet.loadFromUri('/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('/models'),
-  faceapi.nets.ssdMobilenetv1.loadFromUri('/models')
+  faceapi.nets.faceRecognitionNet.loadFromUri('/static/models'),
+  faceapi.nets.faceLandmark68Net.loadFromUri('/static/models'),
+  faceapi.nets.ssdMobilenetv1.loadFromUri('/static/models')
 ]).then(start)
 
 async function start() {

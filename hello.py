@@ -55,6 +55,14 @@ def getstarted():
 def login():
     return render_template("login.html")
 
+
+# 127.0.0.1 - - [19/Sep/2021 08:13:56] "GET /models/face_recognition_model-weights_manifest.json HTTP/1.1" 404 -
+# 127.0.0.1 - - [19/Sep/2021 08:13:56] "GET /models/face_landmark_68_model-weights_manifest.json HTTP/1.1" 404 -
+# 127.0.0.1 - - [19/Sep/2021 08:13:56] "GET /models/ssd_mobilenetv1_model-weights_manifest.json HTTP/1.1" 404 -
+# @app.route("/models/face_recognition_model-weights_manifest.json")
+# def models_weights_manifest():
+#     return "models"
+
 @app.route("/submit_data", methods=['POST','GET'])
 def submit():
     print(request.method)
