@@ -39,22 +39,27 @@ async function start() {
 }
 
 function loadLabeledImages() {
-  // labels = ['Black Widow', 'Captain America', 'Captain Marvel', 'Hawkeye', 'Jim Rhodes', 'Thor', 'Tony Stark']
-  labels = ['Justin Bieber: Known Illnesses include Lyme Disease, Chronic Anxiety.'] 
+  const labels = ['Justin Bieber: Lyme Disease, Chronic Anxiety', 
+  'Thomas Wang: Anaphylaxis, Diabetes', 
+  'Ariana Grande: Cholinergic Urticaria',
+  'Shawn Mendes: Asthma',
+  ]
+  const links  = ['https://www.biography.com/.image/t_share/MTM2OTI2NTY2Mjg5NTE2MTI5/justin_bieber_2015_photo_courtesy_dfree_shutterstock_348418241_croppedjpg.jpg',
+  'https://vantagetutoring.org/assets/tutorphotos/twang.jpg',
+  'https://upload.wikimedia.org/wikipedia/commons/d/dd/Ariana_Grande_Grammys_Red_Carpet_2020.png',
+  'https://upload.wikimedia.org/wikipedia/commons/2/26/Shawn_Mendes_teaches_you_Canadian_slangs_02.jpg',
+  ]
   return Promise.all(
-    labels.map(async label => {
+    labels.map(async function(text, index){
       const descriptions = []
-      for (let i = 1; i <= 2; i++) {
-        const img = await faceapi.fetchImage(`https://www.biography.com/.image/t_share/MTM2OTI2NTY2Mjg5NTE2MTI5/justin_bieber_2015_photo_courtesy_dfree_shutterstock_348418241_croppedjpg.jpg`)
-        const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
-        descriptions.push(detections.descriptor)
-      }
+      const img = await faceapi.fetchImage(links[index])
+      const detections = await faceapi.detectSingleFace(img).withFaceLandmarks().withFaceDescriptor()
+      descriptions.push(detections.descriptor)
 
-      return new faceapi.LabeledFaceDescriptors(label, descriptions)
+      return new faceapi.LabeledFaceDescriptors(text, descriptions)
     })
   )
 }
-
 
 
 
