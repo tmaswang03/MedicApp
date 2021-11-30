@@ -1,4 +1,4 @@
-Medicapp - A convenient and safe way to see people's medical issues.
+# Medicapp - A convenient and safe way to see people's medical issues.
 
 # Inspiration:
 What makes so many conditions and viruses dangerous, such as Covid and allergies, is the fact that they are not always visually apparent. Oftentimes allergies and other medical conditions are triggered from outside parties that didn’t know you had the medical problem, and this became our inspiration for Medicapp. We wanted it to be easier to access someone’s medical issues so that accidental injuries can be avoided as efficiently as possible, including at locations such as parks, landmarks, and monuments. Medicapp helps with this problem by allowing individuals to upload a selfie which is then connected to their medical conditions so that any other individual can take a picture of them and access their set of medical problems.
